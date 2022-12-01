@@ -1,0 +1,57 @@
+FORMAT: 1A
+
+# Group Albums
+## Get random albums [GET /albums/random]
+Return up to 20 albums at random
+
++ Response 200 (application/json)
+    + Attributes (array[Album])
+
+## Search albums [POST /albums/search]
++ Response 200 (application/json)
+
+# Group Artist
+## Get artists [GET /artists{?limit,offset}]
++ Parameters
+    + limit: 20 (number, optional)
+        + Default: `20`
+    + offset: 0 (number, optional)
+        + Default: `0`
+
++ Response 200 (application/json)
+    + Attributes
+        + items (array[Artist])
+        + n_items: 10 (number)
+        + offset 0 (number)
+
+# Group Genres
+## Get genres [GET /genres]
++ Response 200 (application/json)
+    + Attributes (array[Genre])
+
+# Data Structures
+## Album
++ spotify_album_id: 2up3OPMp9Tb4dAKM2erWXQ (string)
++ name: Explorations (string)
++ image_url: https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228 (string)
++ release_date: 1669898063 (number)
++ created_at: 1669898063 (number)
++ updated_at: 1669898063 (number)
++ acousticness: 0.5 (number)
++ danceability: 0.5 (number)
++ energy: 0.5 (number)
++ instrumentalness: 0.5 (number)
++ liveness: 0.5 (number)
++ loudness: 0.5 (number)
++ speechiness: 0.5 (number)
++ valence: 0.5 (number)
++ artists (array[Artist])
+
+## Artist
++ spotify_artist_id: 2up3OPMp9Tb4dAKM2erWXQ (string)
++ name: Bill Evans (string)
++ image_url: https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228 (string)
+
+## Genre
++ genre_id: 1 (number)
++ name: Jazz (string)

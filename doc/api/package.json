@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "aglio": "^2.3.0"
+  },
+  "scripts": {
+    "build": "aglio -i index.apib -o index.html"
+  }
+}
