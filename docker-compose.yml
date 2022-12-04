@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  gui:
+    build: ./docker/dev/gui
+    volumes:
+      - ./gui:/work
+    tty: true
+    ports:
+      - 3000:3000
+  api:
+    build: ./docker/dev/api
+    volumes:
+      - ./api:/work
+    tty: true
+    ports:
+      - 8080:8080
+  scripts:
+    build: ./docker/dev/scripts
+    volumes:
+      - ./scripts:/work
+    tty: true
